@@ -1,0 +1,28 @@
+% Define some parameters
+
+s = 1;
+% Where s is the fixed measure of participating sellers
+u = 1;
+%Where u is the the buyers utility from consuming the good
+c = 1/6;
+%Where c is the sellers cost
+v_b = 5/54;
+%Where u_b is a constraint, value to a buyer of not participating
+%(i.e., their outside option)
+
+%
+
+%x = [b, p]
+
+% Define the utility function
+utility = @(x) -(x(1)^alpha * x(2)^(1-alpha));
+
+% Initial guess for the decision variables (x and y)
+x0 = [20, 20];  % Initial guess
+%The initial guess can be any *reasonable* guess at what the decision
+%variables could be within the bounds
+
+% Define lower and upper bounds for the decision variables
+lb = [0, c];  % Non-negativity constraints
+ub = [inf, u];      % No upper bounds
+
